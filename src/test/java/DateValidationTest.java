@@ -50,7 +50,7 @@ class DateValidationTest {
 
     @Test
     public void testValidYear() {
-        assertEquals(true, DateValidation.validYear(1950));
+        assertEquals(false, DateValidation.validYear(1950));
         assertEquals(true, DateValidation.validYear(2018));
         assertEquals(false, DateValidation.validYear(1000));
         assertEquals(false, DateValidation.validYear(2050));
@@ -58,7 +58,7 @@ class DateValidationTest {
 
     @Test
     public void testValidCombination() {
-        assertEquals(true, DateValidation.validCombination(31, 3, 1980));
+        assertEquals(false, DateValidation.validCombination(31, 3, 1980));
         assertEquals(true, DateValidation.validCombination(29, 2, 1000));
         assertEquals(true, DateValidation.validCombination(30, 4, 1980));
         assertEquals(false, DateValidation.validCombination(29, 2, 1991));
