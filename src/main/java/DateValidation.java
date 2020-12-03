@@ -12,7 +12,6 @@ public class DateValidation {
     }*/
 
     public static boolean isValidDate(int day, int month, int year) {
-    	System.out.println("hello");
         if (!validDate(day))
             return false;
 
